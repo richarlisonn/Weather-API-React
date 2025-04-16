@@ -7,7 +7,7 @@ import WeatherInformation from './components/weather-info/WeatherInformation';
 
 function App() {
 
-  const [weather, setWeather] = useState({})
+  const [weather, setWeather] = useState()
 
   const inputRef = useRef()
 
@@ -45,8 +45,8 @@ function App() {
         </div>
       </div>
 
-      <WeatherInformation weatherInfo={weather}/>
-    </>
+      {weather && <WeatherInformation weatherInfo={weather}/>
+}    </>
   )
 }
 
