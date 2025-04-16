@@ -1,14 +1,20 @@
 import { useState, useRef } from 'react'
+import axios from 'axios'
 import { Search } from 'lucide-react';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-  const inputRef = useRef()
-  const apiKey = '4a2ba0f48e7dae6a5249c3b53ee1b70d'
-  function city(){
-    console.log(inputRef.current.value)
+  const [weather, setWeather] = useState({})
 
+  const inputRef = useRef()
+
+  async function city(){
+    const cityName = inputRef.current.value
+    const apiKey = '4a2ba0f48e7dae6a5249c3b53ee1b70d'
+    const urlApi = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&lang=pt_br&units=metric`
+
+    const data = await axios.get(urlApi)
+    
   }
   return (
     <>
