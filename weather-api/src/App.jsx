@@ -2,13 +2,16 @@ import { useState, useRef } from 'react'
 import axios from 'axios'
 import { Search } from 'lucide-react';
 import './App.css'
+import WeatherInformation from './components/weather-info/WeatherInformation';
+
 
 function App() {
+
   const [weather, setWeather] = useState({})
 
   const inputRef = useRef()
 
-  async function city(){
+  async function apiService(){
     const cityName = inputRef.current.value
     const apiKey = '4a2ba0f48e7dae6a5249c3b53ee1b70d'
     const urlApi = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&lang=pt_br&units=metric`
@@ -16,6 +19,7 @@ function App() {
     const apiInfo = await axios.get(urlApi)
     setWeather(apiInfo.data)
   }
+
   return (
     <>
       <div className="main_section">
@@ -36,9 +40,12 @@ function App() {
            placeholder='Enter a Place:'
            />
 
-          <button onClick={city}>Enter</button>
+          <button onClick={apiService}>Enter</button>
+
         </div>
       </div>
+
+      <WeatherInformation weatherInfo={weather}/>
     </>
   )
 }
