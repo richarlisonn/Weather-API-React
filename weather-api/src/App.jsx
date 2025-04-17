@@ -22,12 +22,12 @@ function App() {
 
   return (
     <>
-      <div className="main_section">
-        <header>
+      <header className="main_section">
+        <div className='title'>
           <h1>WEATHER 
             <span> NOW</span>
             </h1>
-        </header>
+        </div>
         
         <div 
         className="api_search">
@@ -43,9 +43,9 @@ function App() {
           <button onClick={apiService}>Enter</button>
 
         </div>
-      </div>
+      </header>
 
-      {weather && <WeatherInformation weatherInfo={weather}/>
+  {weather &&<WeatherInformation weatherInfo={weather}/>
 }    </>
   )
 }
