@@ -1,9 +1,7 @@
 import { useState, useRef } from 'react'
 import axios from 'axios'
-import { Search } from 'lucide-react';
 import './App.css'
 import WeatherInformation from './components/weather-info/WeatherInformation';
-
 
 function App() {
 
@@ -22,20 +20,17 @@ function App() {
 
   return (
     <>
-      <header className="main_section">
+      <div className='header-main'>
+      <header>
         <div className='title'>
-          <h1>WEATHER 
-            <span> NOW</span>
-            </h1>
+          <h1>Where? </h1>
         </div>
         
-        <div 
-        className="api_search">
-          <Search size={20} />
+        <div className="api-search">
           
           <input
            type="text"  
-           id="text_user" 
+           id="text-user" 
            ref={inputRef}
            placeholder='Enter a Place:'
            />
@@ -44,6 +39,8 @@ function App() {
 
         </div>
       </header>
+
+      </div>
 
   {weather &&<WeatherInformation weatherInfo={weather}/>
 }    </>

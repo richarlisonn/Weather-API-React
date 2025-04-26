@@ -6,7 +6,7 @@ const WeatherInformation = ({weatherInfo}) => {
   return (
     <div>
       <h2>{weatherInfo.name}</h2>
-
+      
       <div className="imageIfo">
       <img src={`https://openweathermap.org/img/wn/${weatherInfo.weather[0].icon}@2x.png`} />     
       <p>{Math.round(weatherInfo.main.temp)}°C</p>
