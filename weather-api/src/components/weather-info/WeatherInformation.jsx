@@ -4,8 +4,8 @@ import './WeatherInformation.css'
 const WeatherInformation = ({weatherInfo}) => {
   console.log(weatherInfo)
   return (
-    <div>
-      <h2>{weatherInfo.name}</h2>
+    <div className='contaier-main-component-info'>
+      <h2 className='tiitle-info'>{weatherInfo.name}</h2>
       
       <div className="imageIfo">
       <img src={`https://openweathermap.org/img/wn/${weatherInfo.weather[0].icon}@2x.png`} />     

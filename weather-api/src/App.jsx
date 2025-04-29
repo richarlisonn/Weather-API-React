@@ -19,13 +19,8 @@ function App() {
 
     const apiInfo = await axios.get(urlApi)
 
-    //error
-    if(inputRef == "") {
-      alert('Please enter a city name')
-      
-    }else{
+  
       setWeather(apiInfo.data)
-    }
 
   }
 
