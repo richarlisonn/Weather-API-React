@@ -1,28 +1,67 @@
-body{
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    align-items: center;    
-}
+/* WeatherInformation.css */
 
-.contaier-main-component-info{
-    width: 34vw;
-   
-   position: relative;
-   bottom: 100px;
-    
- 
-
-    padding: 50px;
-
+.contaier-main-component-info {
+    padding: 40px 20px;
+    text-align: center;
     background-color: rgba(16, 85, 175, 0.3);
     backdrop-filter: blur(8px);
-    border-radius: 10px;
-    font-size: 1.2rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
     z-index: 98;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    margin: auto;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .tittle-info {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Ajustes para responsividade */
+  @media (max-width: 768px) {
+    .contaier-main-component-info {
+      padding: 30px 15px;
+    }
+  
+    .tittle-info {
+      font-size: 2rem;
+    }
+  
+    .others {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  
+  /* Ajustes para telas muito pequenas */
+  @media (max-width: 480px) {
+    .contaier-main-component-info {
+      padding: 20px 10px;
+      max-width: 100%;
+    }
+  
+    .tittle-info {
+      font-size: 1.8rem;
+    }
+  
+    .others {
+      gap: 10px;
+    }
+  
+    .imageIfo img {
+      width: 100px;
+      height: 100px;
+    }
 
-    
-}
-.tittle-info{
-    font: 3rem;
-}
+    .contaier-main-component-info{
+        width: 90%;
+    }
+  }
+  

@@ -1,81 +1,82 @@
-body{
-    background-color: rgba(164, 182, 206, 0.808);
-    color: aliceblue;
-    font-family: poppins, sans-serif;
-}
-
-.header-main{
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #a4b6ce, #9dbde0);
+    color: #ffffff;
+    min-height: 100vh;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    flex: 1;
-    
-    width: 90%;
+  }
+  
+  .header-main {
+    width: 100%;
     max-width: 700px;
-    height: 100px;
-    margin: 0 auto;    
-    
-    position: fixed;
-    top: 20px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    
-    
-    
+    margin: 20px auto;
     background-color: rgba(16, 85, 175, 0.3);
     backdrop-filter: blur(8px);
     border-radius: 10px;
-    z-index: 99;
-    text-align: center;
-    
-    
-}
-
-#text-user{
-    font-size: 1rem;
-    
-    border: none;
-    border-radius: 20px;
-   
-    padding: 5px 10px;
-    
-    background-color: beige;
-    outline: none;
-}
-
-.api-search{
+    padding: 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .api-search {
+    display: flex;
     gap: 10px;
     flex-wrap: wrap;
-}
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 1rem;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+  }
 
-
-
-button{
+  #text-user {
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 14px;
+    background-color: beige;
+    outline: none;
+    width: 250px;
+    max-width: 90%;
+  }
+  
+  button {
     border: none;
     font-size: 1rem;
-    border-radius: 3px;
-    padding: 2px 5px;
+    border-radius: 6px;
+    padding: 8px 14px;
     cursor: pointer;
     background-color: rgba(25, 86, 165, 0.575);
-    transition: all 0.3s ease-in-out;
-}
-
-
-button:hover{
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
     background-color: rgba(25, 86, 165, 0.8);
-}
-
-button:active{
+  }
+  
+  button:active {
     background-color: rgba(25, 86, 165, 0.3);
-    transform: matrix(0.9, 0, 0, 0.9, 0, 0);
-}
+    transform: scale(0.95);
+  }
 
-button:focus{
-    outline: none;
-}
+  @media (max-width: 450px) {
+    .header-main{
+        width: 90%;
+    }
+  }
 
+  
+  
+  

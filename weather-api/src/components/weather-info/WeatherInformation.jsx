@@ -4,11 +4,11 @@ import './WeatherInformation.css'
 const WeatherInformation = ({weatherInfo}) => {
   console.log(weatherInfo)
   return (
-    <div className='contaier-main-component-info'>
+    <div className='contaier-main-component-info' id='cont'>
       <h2 className='tiitle-info'>{weatherInfo.name}</h2>
       
       <div className="imageIfo">
-      <img src={`https://openweathermap.org/img/wn/${weatherInfo.weather[0].icon}@2x.png`} />     
+      <img src={`https://openweathermap.org/img/wn/${weatherInfo.weather[0].icon}@2x.png`} id='img-info-api'/>     
       <p>{Math.round(weatherInfo.main.temp)}°C</p>
       </div>
 
