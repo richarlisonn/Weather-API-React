@@ -58,7 +58,7 @@ Displays:
 If the user submits an empty field or an invalid location, the app displays appropriate error messages.
 
 ![Error Message](./images-readme/4.png)
-![Error Message](./images-readme/5.png)
+
 
 ---
 
